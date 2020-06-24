@@ -1,7 +1,7 @@
 import sys
 
-sys.stdout = open("june16/output.txt", "w")
-sys.stdin = open("june16/input.txt", "r")
+# sys.stdout = open("june16/output.txt", "w")
+# sys.stdin = open("june16/input.txt", "r")
 
 for t in range(int(input())):
     n = int(input())
