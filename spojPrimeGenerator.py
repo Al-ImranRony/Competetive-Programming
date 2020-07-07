@@ -5,7 +5,6 @@ sys.stdin = open("input.txt", "r")
 sys.stdout = open("output.txt", "w")
 
 # By brute force
-
 for _ in range(int(input())):
     m, n = map(int, input().split())
     primes = {}

@@ -7,13 +7,13 @@ sys.stdout = open("output.txt", "w")
 
 def CheckPrime(n, c):
     # It checks the primality in the worst case scenario
-    if n == 1 or n % 2 == 0:
-        c += 1
-        print("Not prime", "-> Iterration needed:", c)
-        return
     if n == 2:
         c += 1
         print("Prime", "-> Iterration needed:", c)
+        return
+    if n == 1 or n % 2 == 0:
+        c += 1
+        print("Not prime", "-> Iterration needed:", c)
         return
 
     sr = int(math.sqrt(n))
