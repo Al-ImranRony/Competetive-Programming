@@ -1,2 +1,6 @@
 input.txt
 output.txt
+
+*.bin
+*.prob
+*.json
