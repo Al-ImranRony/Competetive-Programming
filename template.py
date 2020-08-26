@@ -5,8 +5,12 @@ import math
 import heapq        # helps to return the top n smallest/largest elems
 import collections
 from collections import Counter, defaultdict
-     
 
+     
+for _ in range(int(input())):
+    x, y, k, n = map(int, input().split())
+
+    
 class Solution:
     def func(self, x, n):
         return x
