@@ -3,21 +3,22 @@
 import sys
 import math
 import heapq     
-import random
+import bisect
 import collections
 from collections import Counter, defaultdict
 
 def findRightInterval(intervals):
-    ints = sorted([[j,k,i] for i,[j,k] in enumerate(intervals)])
-        begs = [i for i,_,_ in ints]
-        out = [-1]*len(begs)
-        for i,j,k in ints:
-            t = bisect.bisect_left(begs, j)
-            if t < len(begs):
-                out[k] = ints[t][2]
-        
-        return out
+    ints = sorted([[i,j,k] for k,[i,j] in enumerate(intervals)])  # Sorted by j (k->index)
+    startps = [i for i,_,_ in ints]
+    res = [-1]*len(startps)
+
+    for _,j,k in ints:
+        t = bisect.bisect_left(startps, j)
+        if t < len(startps):
+            res[k] = ints[t][2]
+    
+    return res
 
 
-ans = findRightInterval([ [3,4], [2,3], [1,2] ])
+ans = findRightInterval([[1,4], [2,3], [3,4]])
 print(ans)
