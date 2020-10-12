@@ -1,4 +1,5 @@
 # LeetCode Oct Challenge 11
+# Problem Similarities: Smallest Subsequence of Distinct Characters
 
 def removeDuplicateLetters(s) -> str:
     lastIdxs = {ltr: i for i, ltr in enumerate(s)}
@@ -15,4 +16,5 @@ def removeDuplicateLetters(s) -> str:
 
 print(removeDuplicateLetters("cbacdcbc"))
 print(removeDuplicateLetters("bcabc"))
+print(removeDuplicateLetters("bcghfjgabc"))
 
