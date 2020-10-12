@@ -2,12 +2,12 @@
 # Problem Similarities: Smallest Subsequence of Distinct Characters
 
 def removeDuplicateLetters(s) -> str:
-    lastIdxs = {ltr: i for i, ltr in enumerate(s)}
+    lastIdxs = {ltr: idx for idx, ltr in enumerate(s)}
     stack = []
 
     for i, ltr in enumerate(s):
         if ltr in stack: continue
-        while stack and (ltr < stack[-1]) and (i < lastIdxs[stack[-1]]):
+        while stack and (ltr < stack[-1]) and (i < lastIdxs[stack[-1]]):  
             stack.pop()
         stack.append(ltr)
 
