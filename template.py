@@ -12,6 +12,7 @@ from itertools import combinations, permutations
 for _ in range(int(input())):
     x, y, k, n = map(int, input().split())
 
+    arr = list(map(int, input().split()))
 
 class Solution:
     def func(self, x, n):
@@ -20,9 +21,9 @@ class Solution:
 
 if __name__ == "__main__":
     obj = Solution()
-    result = obj.func([1, 2, 3, 4, 5, 6, 7, 8, 9], [2, 3, 6])
+    result = obj.func([1, 2, 3], [2, 3, 6])
     print(result)
 
 zipped = zip(dict.values(), dict.keys())
-print(sorted(zipped))  # sorted by values
+print(sorted(zipped))                   # sorted by values
 
