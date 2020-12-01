@@ -8,12 +8,13 @@ import collections
 from collections import Counter, defaultdict
 from itertools import combinations, permutations
 
-
 for _ in range(int(input())):
     n = int(input())
-    a = list(map(int, input().split()))
-    m, mark = 200000, [0] * (n+1)
-    print(mark)
-    for i in range(1, n+1):
-        mark[a[i]] += 1
-    print(mark)
+    a = [int(i) for i in input().split()]
+    num = [0]*(n+1)
+    for i in a:
+        num[i] +=1
+    if num.count(1)==0:
+        print(-1)
+    else:
+        print(a.index(num.index(1))+1)
