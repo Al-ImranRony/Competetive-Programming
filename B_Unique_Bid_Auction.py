@@ -10,7 +10,7 @@ from itertools import combinations, permutations
 
 for _ in range(int(input())):
     n = int(input())
-    a = [int(i) for i in input().split()]
+    a = list(map(int, input().split()))
     num = [0]*(n+1)
     for i in a:
         num[i] +=1

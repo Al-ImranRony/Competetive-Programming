@@ -5,3 +5,6 @@ import math
 import heapq 
 import random
 import collections
+
+
+a, b, c = (map(int, input().split()))
