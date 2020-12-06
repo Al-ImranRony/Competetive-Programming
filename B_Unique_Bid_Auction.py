@@ -12,8 +12,10 @@ for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
     num = [0]*(n+1)
+    print(num, '*')
     for i in a:
         num[i] +=1
+    print(num)
     if num.count(1)==0:
         print(-1)
     else:
