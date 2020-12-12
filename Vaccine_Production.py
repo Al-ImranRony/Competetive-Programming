@@ -8,3 +8,6 @@ import collections
 
 
 d1, v1, d2, v2, p = map(int, input().split())
+sum, i = 0, 1
+while (sum<=p):
+
