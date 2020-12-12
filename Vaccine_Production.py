@@ -1,4 +1,4 @@
-# Codechef dec challenge
+# Codechef dec challenge - 1
 
 import sys
 import math
@@ -8,6 +8,11 @@ import collections
 
 
 d1, v1, d2, v2, p = map(int, input().split())
-sum, i = 0, 1
-while (sum<=p):
+vacPro, d = 0, 0
+while (vacPro < p):
+    d += 1
+    if (d >= d1): vacPro += v1
+    if (d >= d2): vacPro += v2
+    
+print(d)
 
