@@ -8,3 +8,5 @@ import collections
 
 
 a, b, c = (map(int, input().split()))
+for _ in range(a):
+    al = int(input())
