@@ -5,17 +5,22 @@ import math
 import heapq 
 import random
 import collections
+from collections import Counter, defaultdict
+from itertools import combinations, permutations
 
 
 n1, n2, n3 = (map(int, input().split()))
-l1 = l2 = l3 = fl = []
-for _ in range(n1):
-    i = int(input())
-    l1.append[i]
-for _ in range(n2):
-    i = int(input())
-    l2.append[i]
-for _ in range(n3):
-    i = int(input())
-    l3.append[i]
-mx = max(len(l1), len(l2), len(l3))
+dl, fl = [], []
+for i in range(n1+n2+n3):
+    id = int(input())
+    dl.append(id)
+
+dl = Counter(dl)
+for j in dl.keys():
+    if dl[j] != 1:
+        fl.append(j)
+
+print(len(fl))
+fl.sort()
+for k in fl:
+    print(k)
