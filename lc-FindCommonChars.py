@@ -1,4 +1,4 @@
-# LeetCode easy problem, QuickFind-UnionFind problems
+# LeetCode easy problem, QuickFind-UnionFind problem
 # Time - O(n*n)
 
 import sys
