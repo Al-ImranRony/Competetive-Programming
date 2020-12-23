@@ -11,12 +11,15 @@ from itertools import combinations, permutations
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
-    num = [0]*(n+1)
-    print(num, '*')
+
+    num, mxn, idx = defaultdict(int), 999999999, -1    
     for i in a:
-        num[i] +=1
-    print(num)
-    if num.count(1)==0:
-        print(-1)
-    else:
-        print(a.index(num.index(1))+1)
+        num[i] = num.get(i, 0) + 1                   # num[i] += 1 can also be !
+    
+    for i in range(n):
+        if (mxn > a[i]) and (num[a[i]] == 1):
+            idx = i+1
+            mxn = a[i]
+
+    print(idx)
+
