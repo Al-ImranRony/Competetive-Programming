@@ -5,7 +5,7 @@ import math
 import heapq 
 import random
 import collections
-from collections import Counter, defaultdict
+from collections import Counter, defaultdict, deque
 from itertools import combinations, permutations
 
 
