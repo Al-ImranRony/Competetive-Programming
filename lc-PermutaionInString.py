@@ -1,30 +1,40 @@
+'''
+First intuition solution, need too much time  O(n * log(n) * n), obvious TLE !
+'''
 
 
-
-
-def permute(s1, s2, ans):
-    ln = len(s1)
-    alpha = [False] * 26
+def checkInclusion(s1, s2):
     res = False
-
-    if (ln == 0):
-        print(ans, end = " ")
-        if (ans not in s2):
+    permutationS = []
+    p = permute(s1, s2, "", permutationS)
+    for each in p:
+        if (each not in s2):
             res = False
         else:
-            return True
-        return res
+            res = True
+            break
+    
+    return res
 
-    for i in range(len(s1)):
+
+def permute(s1, s2, ans, permutationS):
+    ln = len(s1)
+    alpha = [False] * 26
+    
+    if (ln == 0):
+        permutationS.append(ans)
+        print(ans, permutationS)
+
+    for i in range(ln):
         char = s1[i]
         left, right = s1[0:i], s1[i+1: ]
         rest = left + right
 
         if (alpha[ord(char) - ord('a')] == False):
-            permute(rest, s2, ans+char)
+            permute(rest, s2, ans+char, permutationS)
         alpha[ord(char) - ord('a')] = True
-        # permute(rest, s2, ans+char)
+    
+    return permutationS
 
 
-print(permute("aabc", "adkjhbaacwruy", ""))
-# permute("aabc", "adkjhbaacwruy", "")
+print(checkInclusion("aabc", "adkjhbaacwruy"))
